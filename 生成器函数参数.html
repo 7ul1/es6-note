@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function* gen(arg) {
+            console.log(arg);
+            let y = yield 111;
+            console.log(y);
+            let y1 = yield 222;
+            console.log(y1);
+            let y2 = yield 333;
+            console.log(y2);
+        }
+
+        // 执行获取迭代器对象
+        let iterator = gen('AAA');
+
+        console.log(iterator.next());
+        // next 方法可以传入实参
+        console.log(iterator.next('BBB'));
+        console.log(iterator.next('CCC'));
+        console.log(iterator.next('DDD'));
+    </script>
+</body>
+
+</html>

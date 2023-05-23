@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #ad {
+            width: 200px;
+            height: 200px;
+            background: #58a;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="ad"></div>
+    <script>
+        // 需求1 点击 di 2s 后颜色变成 粉色
+        let ad = document.getElementById('ad');
+        ad.addEventListener('click', function () {
+            // 保存 this 的值
+            // let _this = this;
+            // 定时器
+            setTimeout(() => {
+                // 改背景
+                console.log(this);
+                this.style.background = 'pink';
+            }, 2000)
+        })
+        // 需求2 从数组中返回偶数的元素
+        const arr = [1, 6, 9, 10, 100, 25]
+        // const result = arr.filter(function (item) {
+        //     if (item % 2 === 0) {
+        //         return true;
+        //     } else {
+        //         return false;
+        //     }
+        // })
+        const result = arr.filter(item => item % 2 === 0);
+        console.log(result);
+
+        // 箭头函数 适合与 this 无关的回调 定时器 数组的方法回调
+        // 箭头函数 不适合与 this有关的回调 比如 dom事件的回调 对象的方法（不适合）
+    </script>
+</body>
+
+</html>

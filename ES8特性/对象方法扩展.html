@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 声明对象
+        const school = {
+            name: '尚硅谷',
+            cities: ['北京', '上海', '深圳'],
+            xueke: ['前端', 'java']
+        }
+
+        // 获取对象所以的键
+        // console.log(Object.keys(school));
+        // 获取对象所以的值
+        // console.log(Object.values(school));
+        // entries
+        // console.log(Object.entries(school));
+        // 创建map
+        // const m = new Map(Object.entries(school));
+        // console.log(m.get('cities'));
+
+        // 对象属性的描述对象
+        // console.log(Object.getOwnPropertyDescriptors(school));
+
+        const obj = Object.create(null, {
+            name: {
+                // 设置值
+                value: 'ATSHANGGUIGU',
+                // 属性特性
+                writable: true,
+                configurable: true,
+                enumerable: true
+            }
+        })
+    </script>
+</body>
+
+</html>

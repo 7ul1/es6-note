@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <script>
+        // 1. 数组的合并
+        // const kuaizi = [' wang', 'yang', 'qingsheng'];
+        // const fenghuang = ['zengyi', 'linghua'];
+        // // const zuixuanpingg = kuaizi.concat(fenghuang);
+        // const zuixuanpingg = [...kuaizi, ...fenghuang]
+        // console.log(zuixuanpingg);
+
+        // 2. 数组的克隆
+        // const sanzhihua = ['1', '2', '3'];
+        // const sanyecao = [...sanzhihua];
+        // console.log(sanyecao);
+
+        // 3. 将伪数组转换成数组
+        const divs = document.querySelectorAll('div');
+        const divArr = [...divs]
+        console.log(divArr);
+    </script>
+</body>
+
+</html>

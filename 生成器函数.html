@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 生成器其实就是一个 特殊的函数
+        // 异步编程  纯回调函数  node fs ajax mongodb
+        // yield => 函数代码的分隔符
+        function* gen() {
+            // console.log('Hello Generator');
+            // console.log(111);
+            yield '一只没有耳朵';
+            // console.log(222);
+            yield '一直没有尾巴';
+            // console.log(333);
+            yield ' 真奇怪';
+            // console.log(444);
+        }
+
+        let iterator = gen();
+        // console.log(iterator);
+        console.log(iterator.next());
+        console.log(iterator.next());
+        console.log(iterator.next());
+        console.log(iterator.next());
+
+        for (let v of gen()) {
+            console.log(v);
+        }
+    </script>
+</body>
+
+</html>

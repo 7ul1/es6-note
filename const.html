@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>const</title>
+</head>
+
+<body>
+    <script>
+        // 声明常量
+        const school = '尚硅谷';
+        // console.log(school);
+
+        // 1. 一定要赋初始值
+        // const A;
+
+        // 2. 一般常量需要大写
+        // const a = 100;
+        // console.log(a);
+
+        // 3. 常量的值不得修改
+        // school = 'ATHGUS';
+
+        // 4. 块级作用域
+        // {
+        //     const PLAY = 'UZI';
+        // }
+        // console.log(PLAY);
+
+        // 5. 对于数组和对象的元素修改 不算做对常量的修改 不会报错
+        const TEAM = ['UZI', 'UI', 'MING', 'ME']
+        console.log(TEAM);
+        TEAM.push('KDO');
+        console.log(TEAM);
+    </script>
+</body>
+
+</html>

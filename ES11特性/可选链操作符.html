@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>可选链操作符</title>
+</head>
+
+<body>
+    <script>
+        // ?. 
+        function main(config) {
+            // const dbHost = config && config.db && config.db.host;
+
+            const dbHost = config?.db?.host;
+            const dbName = config?.db?.username;
+            console.log(dbHost);
+            console.log(dbName);
+        }
+
+        main({
+            db: {
+                host: '123.23.2',
+                username: 'root'
+            },
+            cache: {
+                host: '129.54.3',
+                username: 'admin'
+            }
+        })
+    </script>
+</body>
+
+</html>

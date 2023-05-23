@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 声明一个 M
+        let m = new Map();
+
+        // 添加元素
+        m.set('name', '尚硅谷');
+        m.set('age', '18');
+        m.set('change', function () {
+            console.log('我们可以改变你');
+        })
+        let key = {
+            school: 'ATGUIGU',
+            san: '80'
+        };
+        m.set(key, ['北京', '上海', '深圳']);
+
+        // size
+        // console.log(m.size);
+        // console.log(m);
+        // 删除
+        // m.delete('name');
+        // console.log(m);
+        // // 获取
+        // console.log(m.get('change'));
+        // console.log(m.get(key));
+
+        // // 清空
+        // m.clear();
+        // console.log(m);
+
+        // 遍历
+        for (let v of m) {
+            console.log(v);
+        }
+    </script>
+</body>
+
+</html>
